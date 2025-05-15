@@ -1,0 +1,24 @@
+# ---- one-time setup on your machine ----
+mkdir sql-portfolio            # create a local project folder
+cd sql-portfolio
+git init                        # start a Git repo locally
+
+# ---- create the directories ----
+mkdir -p mode/basic
+mkdir -p mode/intermediate
+mkdir -p leetcode
+mkdir -p sqlbolt
+mkdir -p stratascratch/easy
+
+# ---- add a root README so visitors know what this repo is ----
+printf "# SQL Portfolio\n\nSolutions and notes for Mode, LeetCode, SQLBolt, and StrataScratch drills.\n" > README.md
+
+# ---- stage everything and commit ----
+git add .
+git commit -m "chore: scaffold repo skeleton"
+
+# ---- point Git at the repo you created on GitHub ----
+git remote add origin https://github.com/<YOUR_USERNAME>/sql-portfolio.git
+
+# ---- push the commit ----
+git push -u origin main        # or 'master' if that’s your default branch
